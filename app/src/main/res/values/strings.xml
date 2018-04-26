@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AndroidDeviceMeasuring</string>
+
+    <string name="imu_azimuth_angle">Azimuth angle</string>
+    <string name="imu_roll_angle">Roll angle</string>
+    <string name="imu_pitch_angle">Pitch angle</string>
+
+    <string name="time_elapsed">Time Elapsed</string>
+    <string name="no_points">Number of Points Collected</string>
+
+    <!--Plurals-->
+    <string name="degrees">%.2f degrees</string>
+    <string name="duration">%d mins %d seconds</string>
+
+    <string name="error_write_permission_denied">Write permission denied</string>
+
+</resources>

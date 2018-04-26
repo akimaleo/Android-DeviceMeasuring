@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.letoti.kawa.androiddevicemeasuring.domain.entity.ImuData" />
+
+        <variable
+            name="recordingData"
+            type="com.letoti.kawa.androiddevicemeasuring.presentation.features.table.RecordingData" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_table_row"
+        android:orientation="vertical"
+        android:padding="0.5dp">
+
+        <include
+            android:id="@+id/imu_azimuth"
+            layout="@layout/view_table_imu_row"
+            bind:title="@{@string/imu_azimuth_angle}"
+            bind:value="@{@string/degrees(data.azimuthAngle)}" />
+
+        <include
+            android:id="@+id/imu_roll"
+            layout="@layout/view_table_imu_row"
+
+            bind:title="@{@string/imu_roll_angle}"
+            bind:value="@{@string/degrees(data.rollAngle)}" />
+
+        <include
+            android:id="@+id/imu_pitch"
+            layout="@layout/view_table_imu_row"
+            bind:title="@{@string/imu_pitch_angle}"
+            bind:value="@{@string/degrees(data.pitchAngle)}" />
+
+        <include
+            android:id="@+id/imu_duration"
+            layout="@layout/view_table_imu_row"
+            bind:title="@{@string/time_elapsed}"
+            bind:value="@{@string/duration(recordingData.minutes, recordingData.seconds)}" />
+
+        <include
+            android:id="@+id/imu_duration"
+            layout="@layout/view_table_imu_row"
+            bind:title="@{@string/no_points}"
+            bind:value="@{String.valueOf(recordingData.updateCount)}" />
+    </LinearLayout>
+</layout>

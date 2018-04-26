@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="title"
+            type="java.lang.String" />
+
+        <variable
+            name="value"
+            type="java.lang.String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_table_row"
+            android:ellipsize="end"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="@{title, default=row_title}" />
+
+        <TextView
+            android:id="@+id/imu_azimuth_angle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/background_table_row"
+            android:padding="5dp"
+            android:text="@{value, default=row_value}" />
+    </LinearLayout>
+</layout>
+
